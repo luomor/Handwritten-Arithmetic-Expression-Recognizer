@@ -135,7 +135,7 @@ class Preprocessor(object):
             # cv2.waitKey(1000)
 
             # 存储小图
-            cv2.imwrite(save_dir+'/%d.bmp'% (self._getLastSaveFileIndex(save_dir)+1), tmp)
+            cv2.imwrite(save_dir+'/%d.jpg'% (self._getLastSaveFileIndex(save_dir)+1), tmp)
         # cv2.waitKey(0)
         return returnlist
         # return 'Found '+str(len(contours_list))+' signs.'
@@ -147,7 +147,7 @@ class Preprocessor(object):
         for _, _, files in os.walk(dir):
             if files != []:
                 for name in files:
-                    if re.search('.bmp',name)==None:
+                    if re.search('.jpg',name)==None:
                         continue
                     result.append(int(name.split('.')[0]))
         if result == []:
