@@ -95,7 +95,7 @@ class Preprocessor(object):
 
     def _do(self, filename=None,img=None,save_dir='./tmp1'):
         img = img = self._process(filename) if img==None else self._process(img=img)
-        if img == None:
+        if img.any() == None:
             return None
 
         # 获得轮廓
@@ -209,7 +209,7 @@ class Preprocessor(object):
 
     # 反转颜色。
     def _revert(self, img):
-        if img==None:
+        if img.any() == None:
             return None
         for i in range(0, img.shape[0]):
             for j in range(0, img.shape[1]):
