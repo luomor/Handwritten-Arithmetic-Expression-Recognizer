@@ -122,7 +122,7 @@ class Preprocessor(object):
             cv2.drawContours(img, [box], -1, (255, 255, 255), 3)
         # cv2.imshow('bounding box', img)
         # cv2.waitKey(2000)
-        cv2.imwrite(save_dir + '/a.jpg', img)
+        cv2.imwrite(save_dir + '/a.jpeg', img)
 
         # 处理每一个得到的包围盒,将原图分成许多小正方形, 可以选择保存或者展示或者传出。
         returnlist = []
