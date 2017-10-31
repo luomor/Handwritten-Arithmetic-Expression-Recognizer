@@ -17,5 +17,5 @@ class Network(object):
         self.k = tf.get_collection('keep_prob')[0]
 
     # 识别单个字符。
-    def eval(self,img):
-        return self.sess.run(self.predict,feed_dict={self.x:img,self.k:1.0})
+    def eval(self, img):
+        return self.sess.run(self.predict, feed_dict={self.x:img, self.k:1.0})
