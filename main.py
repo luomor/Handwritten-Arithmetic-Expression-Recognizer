@@ -23,6 +23,7 @@ class Main(object):
         ans = ''
         for i in range(len(result)):
             ans = ans + self.dic[result[i]]
+        print ans;
         return ans
 
     # 输入图像文件, 返回结果, 一般用于实际应用中: 从摄像机、微信获得图片。
