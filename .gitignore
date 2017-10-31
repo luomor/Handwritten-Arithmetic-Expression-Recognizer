@@ -1,10 +1,7 @@
-
 *.bmp
-
-*.jpeg
-
 *.xml
-
 *.jpg
-
 *.iml
+
+.idea
+.DS_Store
