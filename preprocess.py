@@ -120,8 +120,9 @@ class Preprocessor(object):
             box = np.int0(cv2.boxPoints(rect))
             # draw a bounding box arounded the detected barcode and display the image
             cv2.drawContours(img, [box], -1, (255, 255, 255), 3)
-        # cv2.imshow('bounding box',img)
+        # cv2.imshow('bounding box', img)
         # cv2.waitKey(2000)
+        cv2.imwrite(save_dir + '/a.jpg', img)
 
         # 处理每一个得到的包围盒,将原图分成许多小正方形, 可以选择保存或者展示或者传出。
         returnlist = []
@@ -135,7 +136,7 @@ class Preprocessor(object):
             # cv2.waitKey(1000)
 
             # 存储小图
-            cv2.imwrite(save_dir+'/%d.jpg'% (self._getLastSaveFileIndex(save_dir)+1), tmp)
+            cv2.imwrite(save_dir + '/%d.jpg'% (self._getLastSaveFileIndex(save_dir) + 1), tmp)
         # cv2.waitKey(0)
         return returnlist
         # return 'Found '+str(len(contours_list))+' signs.'
