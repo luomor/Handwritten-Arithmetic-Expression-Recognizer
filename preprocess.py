@@ -93,7 +93,7 @@ class Preprocessor(object):
         return cutoff
 
 
-    def _do(self, filename=None,img=None,save_dir='./tmp1'):
+    def _do(self, filename=None,img=None,save_dir='./tmp'):
         img = img = self._process(filename) if img==None else self._process(img=img)
         if img.any() == None:
             return None
