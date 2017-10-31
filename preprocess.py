@@ -135,7 +135,7 @@ class Preprocessor(object):
             # cv2.waitKey(1000)
 
             # 存储小图
-            # cv2.imwrite(save_dir+'/%d.bmp'% (self._getLastSaveFileIndex(save_dir)+1), tmp)
+            cv2.imwrite(save_dir+'/%d.bmp'% (self._getLastSaveFileIndex(save_dir)+1), tmp)
         # cv2.waitKey(0)
         return returnlist
         # return 'Found '+str(len(contours_list))+' signs.'
